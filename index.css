@@ -1,0 +1,86 @@
+:root {
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --gap: 6px;
+    --bg: white;
+
+}
+
+body {
+    background-color: rgb(30, 29, 29);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+
+
+}
+
+#cursor {
+    border-radius: 50%;
+    background-color: rgb(75, 74, 74);
+    position: fixed;
+}
+
+
+
+.icn-burger {
+
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--bg);
+    position: relative;
+}
+
+.icn-burger::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--bg);
+}
+
+.icn-burger::before {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--bg);
+}
+
+
+
+.overall-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.icon {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+img {
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+
+}
